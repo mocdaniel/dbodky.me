@@ -1,0 +1,7 @@
+a {
+    color: #19bd99;
+}
+
+sup > a {
+    text-decoration: none;
+}

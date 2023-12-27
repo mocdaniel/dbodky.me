@@ -1,0 +1,47 @@
+baseURL: https://dbodky.me
+languageCode: en-us
+title: Daniel's Blog
+paginate: 5
+theme: PaperMod
+enableRobotsTXT: true
+
+copyright: "© 2023 **Daniel Bodky**"
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+
+params:
+  author: Daniel Bodky
+  comments: true
+  defaultTheme: auto
+  images: /static/thumbnail.jpg
+  profileMode:
+    buttons:
+      - name: Blog
+        url: /posts
+      - name: About
+        url: /about
+    imageTitle: Portrait picture of Daniel
+    imageUrl: /dbodky.jpg
+    enabled: true
+    subtitle: Welcome to my page!
+    title: Hey 👋
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  socialIcons:
+    - name: github
+      url: https://github.com/mocdaniel
+    - name: twitter
+      url: https://twitter.com/d_bodky
+    - name: linkedin
+      url: https://www.linkedin.com/in/daniel-bodky/
