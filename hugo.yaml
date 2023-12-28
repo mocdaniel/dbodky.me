@@ -3,7 +3,6 @@ languageCode: en-us
 title: Daniel's Blog
 paginate: 5
 theme: PaperMod
-enableRobotsTXT: true
 
 copyright: "© 2023 **Daniel Bodky**"
 
@@ -22,6 +21,7 @@ params:
   author: Daniel Bodky
   comments: true
   defaultTheme: auto
+  description: The personal blog of Daniel Bodky, talking about Kubernetes, DevOps, and related things.
   images: /static/thumbnail.jpg
   profileMode:
     buttons:
