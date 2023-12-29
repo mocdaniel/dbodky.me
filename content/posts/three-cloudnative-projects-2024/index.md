@@ -3,6 +3,7 @@ cover:
   image: cover.jpg
   relative: true
   caption: Photo by Kajetan Sumila on Unsplash
+description: While 2023 is coming to an end, many people are already looking forward to 2024. People share predictions for the next year, forecasting emerging technologies and trends. This year, I want to jump on the bandwagon and share what I'll be looking at in 2024.
 tags:
   - cloudnative
   - kubernetes
@@ -12,9 +13,7 @@ date: 2023-12-26T18:07:14+01:00
 title: 'Three Cloudnative Projects to Watch in 2024'
 ---
 
-While 2023 is coming to an end, many people are already looking forward to 2024. People share predictions for the next year, forecasting emerging technologies and trends. This year, I want to jump on the bandwagon and share what I'll be looking at in 2024.
-
-While I'm no fortune teller, thought leader, or expert (not even a senior while we're at it), 2024 is going to be my third year in the cloudnative space. I've been working with Kubernetes and related technologies for most of this time, got certified twice, and formed my own opinion(s) regarding many things in the ecosystem.
+Though I'm no fortune teller, thought leader, or expert (not even a senior while we're at it), 2024 is going to be my third year in the cloudnative space. I've been working with Kubernetes and related technologies for most of this time, got certified twice, and formed my own opinion(s) regarding many things in the ecosystem.
 
 Therefore, I want to share three projects that I think could become important to **me** in 2024.
 
@@ -26,7 +25,7 @@ In what can be called  the *year of AI*, it's no surprise that a project like th
 
 [^1]: As of December 26th, 2023.
 
-{{< figure src="k8sgpt.png" title="k8sgpt analyzing a common ImagePullBackoff error." align="center" >}}
+{{< figure src="k8sgpt.png" title="k8sgpt analyzing a common ImagePullBackoff error." align="center" alt="A screenshot of a terminal showing k8sgpt's analyzing capabilities" >}}
 
 The project's goal is to help operators and developers troubleshooting, securing, and optimizing their Kubernetes clusters. The project's CLI works with every CNCF-conformant Kubernetes distribution, and you can combine it with several different AI models depending on your use case, e.g. **AzureOpenAI** or **Amazon SageMaker**.
 
@@ -44,7 +43,7 @@ From modules being distributed as **OCI artifacts**, to **runtime secrets inject
 
 Stay tuned for a more in-depth look at Timoni in the coming weeks!
 
-{{< figure src="timoni.png" title="Timoni's Quickstart in Action" align="center" >}}
+{{< figure src="timoni.png" title="Timoni's Quickstart in Action" align="center" alt="A screenshot of a terminal showing Timoni's output of a deployment" >}}
 
 ## Cloudnative Observability with eBPF
 
@@ -54,7 +53,7 @@ While I've been a user of [Cilium](https://cilium.io/) here and there (who isn't
 
 Observability isn't the end of the road, though. Tetragon also allows you to **enforce** policies and **block** malicious activity in your infrastructure through CRDs called `TracingPolicies`.
 
-{{< figure src="tetragon.png" title="Tetragon tracks command executions and results in real-time" align="center" >}}
+{{< figure src="tetragon.png" title="Tetragon tracks command executions and results in real-time" align="center" alt="A screenshot of a terminal showing Tetragon's tracing capabilities" >}}
 
 For those of you who got curious about Tetragon, I recommend checking out one of the many available **free** labs by Isovalent, e.g. [Getting Started with Tetragon](https://isovalent.com/labs/security-observability-with-ebpf-and-cilium-tetragon/) - they're great, get you up and running in no time, *and* you will get a badge upon completion!
 
