@@ -1,0 +1,11 @@
+a {
+    color: var(--links);
+}
+
+:root {
+    --links: rgb(14, 83, 109);
+}
+
+.dark {
+    --links: rgb(55, 186, 239);
+}
