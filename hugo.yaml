@@ -22,7 +22,8 @@ params:
   comments: true
   defaultTheme: auto
   description: The personal blog of Daniel Bodky, talking about Kubernetes, DevOps, and related things.
-  images: /static/thumbnail.jpg
+  images:
+    - /thumbnail.jpg
   profileMode:
     buttons:
       - name: Blog
