@@ -10,7 +10,7 @@ menu:
   main:
     - identifier: blog
       name: Blog
-      url: /posts/
+      url: /blog/
       weight: 10
     - identifier: about
       name: About
@@ -27,7 +27,7 @@ params:
   profileMode:
     buttons:
       - name: Blog
-        url: /posts
+        url: /blog
       - name: About
         url: /about
     imageTitle: Portrait picture of Daniel
@@ -38,6 +38,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowReadingTime: true
+  ShowRssButtonInSectionTermList: true
   ShowShareButtons: true
   socialIcons:
     - name: github
