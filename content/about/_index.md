@@ -2,7 +2,7 @@
 
 # About Me
 
-I'm Daniel, a 25 years old **Technology Evangelist** from Southern Germany. I work for [NETWAYS Web Services](https://nws.netways.de) in Nuremberg, where I'm advocating (not only!) for our cloudnative products and services.
+I'm Daniel, a 25 years old **Platform Advocate** from Southern Germany. I work for [NETWAYS Web Services](https://nws.netways.de) in Nuremberg, where I'm advocating (not only!) for our cloudnative products and services.
 
 My area of interest mainly revolves around **Kubernetes**, where I am striving to gain more hands-on experience each and every day after becoming **CKA-** and **CKAD-certified**, thanks to the **LiFT-2022 scholarship**.
 
