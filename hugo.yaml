@@ -30,6 +30,8 @@ params:
         url: /blog
       - name: About
         url: /about
+      - name: Talks
+        url: https://sessionize.com/daniel-bodky/
     imageTitle: Portrait picture of Daniel
     imageUrl: /dbodky.jpg
     enabled: true
