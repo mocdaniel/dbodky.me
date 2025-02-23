@@ -1,10 +1,12 @@
 baseURL: https://dbodky.me/
 languageCode: en-us
 title: Daniel's Blog
-paginate: 5
-theme: PaperMod
+pagination:
+  pagerSize: 5
+theme: 
+  - PaperMod
 
-copyright: "© 2023 **Daniel Bodky**"
+copyright: "© 2023-2025 **Daniel Bodky**"
 
 menu:
   main:
@@ -45,7 +47,9 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/mocdaniel
-    - name: twitter
-      url: https://twitter.com/d_bodky
+    - name: x
+      url: https://x.com/d_bodky
+    - name: bluesky
+      url: https://bsky.app/profile/dbodky.me
     - name: linkedin
       url: https://www.linkedin.com/in/daniel-bodky/

@@ -19,7 +19,7 @@ Recently, a few stories about **spoofed commits** made it into my Twitter feed, 
 
 ---
 
-{{< tweet user="eddiejaoude" id="1670783494346227712" >}}
+{{< x user="eddiejaoude" id="1670783494346227712" >}}
 
 ---
 
@@ -28,7 +28,7 @@ David replied, describing how he apparently managed to sneak a spoofed (**non-ma
 
 ---
 
-{{< tweet user="rawkode" id="1670785539929145345" >}}
+{{< x user="rawkode" id="1670785539929145345" >}}
 
 ---
 
@@ -36,7 +36,7 @@ So, this way of spoofing commits is not only proven to work but also relatively 
 
 ## What does 'signing commits' mean?
 
-Forget about source code repositories and  Git commits for a brief moment and think about your last (job) interview. You probably had a **transcript of records** from your university or maybe a **letter of recommendation** from your previous employer - but would your interviewer trust its contents without the **signature** of your university's chancellor or your former manager? - **probably not**!
+Forget about source code repositories and Git commits for a brief moment and think about your last (job) interview. You probably had a **transcript of records** from your university or maybe a **letter of recommendation** from your previous employer - but would your interviewer trust its contents without the **signature** of your university's chancellor or your former manager? - **probably not**!
 
 So why do we keep trusting **unsigned commits**? I don't know, but when asking around, it's because people either don't know about the features that GitHub and GitLab put at their disposal or get set back by the concept of **signing keys**.
 
@@ -57,7 +57,6 @@ Those qualities are where **gitsign** shines. It's a lightweight CLI that can si
 Upon creating a commit, gitsign will create a **unique authentication URL** and write it to your CLI. If you follow this link, you will be taken to gitsign's authentication page, where you can choose from the three providers mentioned above.
 Once authenticated, the creation of your commit will commence, with a signature bearing your **OIDC signature**.
 
-
 ![](sigstoreprompt.png)
 
 {{< figure src="sigstoresuccess.png" title="The sigstore authentication flow" align="center" alt="the Sigstore authentication flow" >}}
@@ -71,14 +70,14 @@ $ git log --show-signature -1
 commit b0d82aeb3ae2bb053542ebd306e135482152efae (HEAD -> main)
 tlog index: 28881174
 gitsign: Signature made using certificate ID
-0xd02086681ee9733cf5abab19a08dcbebdd44cf82 | 
+0xd02086681ee9733cf5abab19a08dcbebdd44cf82 |
 CN=sigstore-intermediate,O=sigstore.dev
-gitsign: Good signature from 
+gitsign: Good signature from
 [dbodky@gmail.com](https://github.com/login/oauth)
 Validated Git signature: true
 Validated Rekor entry: true
 Validated Certificate claims: false
-WARNING: git verify-commit does not verify cert 
+WARNING: git verify-commit does not verify cert
 claims. Prefer using `gitsign verify` instead.
 Author: Daniel Bodky <dbodky@gmail.com>
 Date:   Wed Jul 26 21:24:35 2023 +0200
@@ -94,17 +93,17 @@ gitsign will need two pieces of information from us: the **email** of the user's
 $ gitsign verify --certificate-identity=dbodky@gmail.com \
 --certificate-oidc-issuer=https://github.com/login/oauth
 tlog index: 28881174
-gitsign: Signature made using certificate ID 
-0xd02086681ee9733cf5abab19a08dcbebdd44cf82 | 
+gitsign: Signature made using certificate ID
+0xd02086681ee9733cf5abab19a08dcbebdd44cf82 |
 CN=sigstore-intermediate,O=sigstore.dev
-gitsign: Good signature from 
+gitsign: Good signature from
 [dbodky@gmail.com](https://github.com/login/oauth)
 Validated Git signature: true
 Validated Rekor entry: true
 Validated Certificate claims: true
 ```
 
-We can observe a difference: This time, the **certificate claims** have been validated as well - we made sure that the signature has indeed been created by the **entity contained in the signature**. It does so by looking up the certificate on [**Rekor**](https://docs.sigstore.dev/rekor/overview/), which you can think of as a **free, immutable database** for **signed metadata** hosted by the **cosign project**. 
+We can observe a difference: This time, the **certificate claims** have been validated as well - we made sure that the signature has indeed been created by the **entity contained in the signature**. It does so by looking up the certificate on [**Rekor**](https://docs.sigstore.dev/rekor/overview/), which you can think of as a **free, immutable database** for **signed metadata** hosted by the **cosign project**.
 
 This approach is one of the disadvantages when using gitsign for signed commits: Platforms like **GitHub** or **GitLab** can't look up that information when displaying our commits. This means we will not get a shiny **'Verified'** badge for our commits. If we wanted to test the **integrity** of our signatures, we would need to do so in a **CI/CD pipeline**, e.g. by leveraging the gitsign CLI within a job and failing upon unsuccessful verification.
 
@@ -154,6 +153,7 @@ If, for one reason or another, you want to use GPG keys, the process is similar 
 - [Adding a GPG key to your GitLab account](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#add-a-gpg-key-to-your-account)
 
 Then, again, you need to configure either your local or global Git settings to use the said key:
+
 ```
 $ git config --unset gpg.format  # makes sure to use default format
 $ git config user.signingkey XXXXXXXXXXXXXXXX
@@ -164,14 +164,13 @@ You can now use your GPG key(s) to sign commits in the same way as SSH keys.
 
 ## Summing it up
 
-We looked at the good, the better, and the ugly in this blog post, and all of them got their justification(s) for being used when signing commits. While I see the potential for **gitsign** in **CI/CD usage** and **custom policies**, we only get proper **integration** with **GitHub** and **GitLab** for SSH/GPG keys (for now!). 
+We looked at the good, the better, and the ugly in this blog post, and all of them got their justification(s) for being used when signing commits. While I see the potential for **gitsign** in **CI/CD usage** and **custom policies**, we only get proper **integration** with **GitHub** and **GitLab** for SSH/GPG keys (for now!).
 
 Below I created a small table comparing the key (missing) qualities of the methods introduced in this blog post.
 
-
 {{< figure src="overview-1.png" title="A table comparing the different key qualities of different signing options (SSH key, GPG key, gitsign)" align="center" alt="A table comparing the different key qualities of different signing options (SSH key, GPG key, gitsign)" >}}
 
-**Web/Chain of trust** is a quality that hasn't come up until now, but I wanted to add a few thoughts in the end - one of the core features of GPG keys is that they can be signed by others with their GPG keys. Over time, it's possible to establish a **web of trust** this way, with others confirming the authenticity of your key(s). 
+**Web/Chain of trust** is a quality that hasn't come up until now, but I wanted to add a few thoughts in the end - one of the core features of GPG keys is that they can be signed by others with their GPG keys. Over time, it's possible to establish a **web of trust** this way, with others confirming the authenticity of your key(s).
 **SSH keys** and **gitsign** can't provide such features.
 
 In cases where you just want to verify the authenticity of a commit e.g. from **within your organization,** this doesn't really matter, but it gets interesting when you want to go the extra mile and double-check a 'foreign' contributor:
@@ -182,4 +181,4 @@ $ curl https://github.com/<username>.gpg | gpg -v
 
 This command will **download** all GPG signing keys the contributor added to their GitHub profile and inspect them (without importing them). All you need to do is find the key that shows up on the **'Verified' badge** and have a look at its signatures - has it been signed by others? That's a good sign.
 
-I hope I provided a thorough overview of the different ways of signing your Git commits, but if you got suggestions, questions, or other comments, feel free to submit them below! 
+I hope I provided a thorough overview of the different ways of signing your Git commits, but if you got suggestions, questions, or other comments, feel free to submit them below!
