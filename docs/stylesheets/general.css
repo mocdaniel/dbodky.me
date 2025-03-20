@@ -1,0 +1,269 @@
+/* General Reusable Components */
+
+/* Content Card - Main content container */
+.content-card {
+  background-color: rgba(26, 34, 51, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(45, 55, 72, 0.7);
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.content-card-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(45, 55, 72, 0.7);
+  padding-bottom: 1.2rem;
+}
+
+.content-card-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.content-card-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-accent-primary);
+  margin: 0;
+}
+
+/* Section Headings */
+.content-card section h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(45, 55, 72, 0.7);
+}
+
+/* Info Card - Sidebar information cards */
+.info-card {
+  background-color: rgba(13, 17, 23, 0.5);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.info-card-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Feature Card - For achievements, talks, and other features */
+.feature-card {
+  background-color: rgba(13, 17, 23, 0.5);
+  border-radius: 10px;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: rgba(26, 34, 51, 0.7);
+}
+
+/* Horizontal Feature Card (with icon) */
+.feature-card-horizontal {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-card-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(88, 166, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-primary);
+  flex-shrink: 0;
+}
+
+.feature-card-content {
+  flex-grow: 1;
+}
+
+.feature-card-content h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.feature-card-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Feature Card Header (for talks) */
+.feature-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.feature-card-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+}
+
+.feature-card-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.feature-card-title {
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+/* Feature Card Links */
+.feature-card-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.feature-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  background-color: rgba(88, 166, 255, 0.1);
+  color: var(--color-accent-primary);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.feature-card-link:hover {
+  background-color: rgba(88, 166, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  color: var(--color-accent-primary);
+}
+
+/* Contact Card */
+.contact-card {
+  background-color: rgba(13, 17, 23, 0.5);
+  border-radius: 10px;
+  padding: 1.8rem;
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-card {
+    padding: 1.8rem;
+  }
+  
+  .contact-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-actions .md-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-card {
+    padding: 1.5rem;
+  }
+  
+  .content-card-header h1 {
+    font-size: 2rem;
+  }
+  
+  .content-card-subtitle {
+    font-size: 1rem;
+  }
+  
+  .feature-card-horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .feature-card-icon {
+    margin-bottom: 0.8rem;
+  }
+}

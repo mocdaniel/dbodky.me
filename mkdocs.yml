@@ -1,0 +1,86 @@
+copyright: Copyright &copy; 2023 - 2025 Daniel Bodky
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/daniel-bodky
+      name: Linkedin
+    - icon: fontawesome/brands/github
+      link: https://github.com/mocdaniel
+      name: GitHub
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/dbodky.me
+      name: Bluesky
+# Custom CSS
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/general.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+# Homepage configuration
+nav:
+  - Home: index.md
+  - About me: about.md
+  - Blog:
+      - Blog Overview: blog/index.md
+plugins:
+  - blog:
+      authors_profiles: true
+      categories_allowed:
+        - Cloud Native
+        - Homelab
+        - Kubernetes
+        - Tutorials
+      post_date_format: medium
+      post_excerpt: required
+      post_url_format: "{slug}"
+site_name: dbodky.me
+site_url: https://dbodky.me
+site_description: Daniel's Personal Webspace
+site_author: Daniel Bodky
+theme:
+  custom_dir: overrides/
+  features:
+    - content.code.copy
+    - content.footnote.tooltips
+    - header.autohide
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+  font:
+    text: Roboto
+    code: JetBrains Mono
+  icon:
+    logo: fontawesome/solid/code
+  name: material
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
