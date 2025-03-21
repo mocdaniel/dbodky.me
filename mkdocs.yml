@@ -1,5 +1,31 @@
-copyright: Copyright &copy; 2023 - 2025 Daniel Bodky
+copyright: >
+  Copyright &copy; 2023 - 2025 Daniel Bodky - <a href="#__consent">Change cookie settings</a>
 extra:
+  analytics:
+    feedback:
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
+      title: Was this page helpful?
+    property: !ENV [GTAG, '']
+    provider: google
+  consent:
+    actions:
+      - accept
+      - manage
+      - reject
+    description: >-
+      I use cookies to recognize your repeated visits and preferences, as well as to measure which kind of content
+      you like, which pages you found useful (or not!), and what might be missing or unclear.
+    title: Cookie consent
   generator: true
   social:
     - icon: fontawesome/brands/linkedin
@@ -41,6 +67,8 @@ nav:
   - About me: about.md
   - Blog:
       - Blog Overview: blog/index.md
+repo_name: mocdaniel/dbodky.me
+repo_url: https://github.com/mocdaniel/dbodky.me
 plugins:
   - blog:
       authors_profiles: true
@@ -52,6 +80,13 @@ plugins:
       post_date_format: medium
       post_excerpt: required
       post_url_format: "{slug}"
+  - optimize:
+      enabled: !ENV [CI, false]
+  - privacy:
+      enabled: !ENV [CI, false]
+  - search
+  - social
+  - typeset
 site_name: dbodky.me
 site_url: https://dbodky.me
 site_description: Daniel's Personal Webspace
@@ -61,7 +96,7 @@ theme:
   features:
     - content.code.copy
     - content.footnote.tooltips
-    - header.autohide
+    - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
@@ -73,12 +108,15 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    - search.highlight
+    - search.suggest
     - toc.follow
   font:
     text: Roboto
-    code: JetBrains Mono
+    code: Fira Code
   icon:
     logo: fontawesome/solid/code
+    repo: fontawesome/brands/github
   name: material
   palette:
     scheme: slate

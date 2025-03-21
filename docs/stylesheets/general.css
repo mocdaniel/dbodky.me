@@ -74,6 +74,9 @@
   border-radius: 10px;
   padding: 1.2rem;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feature-card:hover {
@@ -140,7 +143,7 @@
 
 .feature-card-title {
   font-size: 1.05rem;
-  margin-top: 0;
+  margin-top: 0 !important;
   margin-bottom: 0.8rem;
   color: #ffffff;
 }

@@ -76,3 +76,11 @@ body {
   background: radial-gradient(circle, rgba(88, 166, 255, 0.3) 0%, transparent 70%);
   animation: pulse 20s ease-in-out 1s infinite alternate;
 }
+
+.md-post--excerpt {
+  background-color: rgba(26, 34, 51, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(45, 55, 72, 0.7);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}

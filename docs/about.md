@@ -1,7 +1,11 @@
 ---
 hide:
+  - feedback
+  - footer
   - toc
   - navigation
+title: About Me
+description: Things to know about Daniel Bodky
 ---
 
 <div class="about-container">
@@ -14,8 +18,8 @@ hide:
       <div class="about-main">
         <section class="about-intro">
           <h2>Hello, I'm <span class="highlight">Daniel</span></h2>
-          <p class="intro-lead">I'm a 26 years old Platform Advocate from Southern Germany. I work for NETWAYS Web Services in Nuremberg, where I’m advocating (not only!) for our cloudnative products and services.</p>
-          <p>I’ve got a strong interest in Kubernetes, Automation, especially GitOps, tools helping with developer experience, and container technologies. Sometimes I write about those topics or give talks at conferences.</p>
+          <p class="intro-lead">I'm a 27 years old Platform Advocate from Southern Germany. I work for NETWAYS Web Services in Nuremberg, where I’m advocating (not only!) for our cloudnative products and services.</p>
+          <p>I’ve got a strong interest in Kubernetes, Automation - especially GitOps, tools helping with developer experience, and container technologies. Sometimes I write about those topics or give talks at conferences.</p>
           <p>In my freetime, I enjoy reading High Fantasy and SciFi, <a href="https://roguebricks.de" target="_blank">help with running a LUG</a> (LEGO User Group), and go on hikes or gravel bike tours around the area.</p>
           <p>You can find me on GitHub, Twitter, and LinkedIn if you want to contact me or got questions. Just follow the social links on the right - I’m always happy to get in touch with new folks.</p>
         </section>
@@ -27,72 +31,56 @@ hide:
         <div class="info-card">
           <h3>Connect</h3>
           <div class="social-links">
-            <a href="https://linkedin.com/in/daniel-bodky" class="social-link">
+            <a href="https://linkedin.com/in/daniel-bodky" target="_blank" class="social-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               LinkedIn
             </a>
-            <a href="https://github.com/mocdaniel" class="social-link">
+            <a href="https://github.com/mocdaniel" target="_blank" class="social-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               GitHub
             </a>
-            <a href="#" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-              Twitter
+            <a href="https://bsky.app/profile/dbodky.me" target="_blank" class="social-link">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><title>Bluesky</title><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+              Bluesky
             </a>
           </div>
         </div>
       </div>
     </div>
-    
     <section class="achievements-section">
       <h2>Expertise & Achievements</h2>
-      
       <div class="achievements-grid">
         <div class="feature-card feature-card-horizontal">
           <div class="feature-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15c2.21 0 4-1.79 4-4 0-2.21-1.79-4-4-4-2.21 0-4 1.79-4 4 0 2.21 1.79 4 4 4z"></path><path d="M19.93 21.12c-1.9-3.79-6.07-6.34-10.93-6-4.86.34-9.03 2.9-10.93 6.7"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44"/><path d="m13.56 11.747 4.332-.924"/><path d="m16 21-3.105-6.21"/><path d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z"/><path d="m6.158 8.633 1.114 4.456"/><path d="m8 21 3.105-6.21"/><circle cx="12" cy="13" r="2"/></svg>
           </div>
+          <h3 class="feature-card-title">Kubestronaut</h3>
           <div class="feature-content">
-            <h3>Certified Kubernetes Administrator</h3>
-            <p>Expert in managing production Kubernetes clusters and cloud-native infrastructure.</p>
+            <p>One of 77 people in Germany and 1357 people worldwide (<i>March 2025</i>) holding the <span style="color: var(--color-accent-primary)">CKA, CKAD, CKS, KCNA</span>, and <span style="color: var(--color-accent-primary)">KCSA</span> certifications focusing on different areas of the Kubernetes cosmos.</p>
           </div>
         </div>
-        
-        <div class="feature-card">
-          <div class="feature-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
-          </div>
-          <div class="feature-content">
-            <h3>Technical Author</h3>
-            <p>Published over 50 technical articles and tutorials on cloud-native technologies.</p>
-          </div>
-        </div>
-        
         <div class="feature-card feature-card-horizontal">
           <div class="feature-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
           </div>
+          <h3 class="feature-card-title">Open Source Contributor</h3>
           <div class="feature-content">
-            <h3>Open Source Contributor</h3>
-            <p>Active contributor to several open-source projects in the Kubernetes ecosystem.</p>
+            <p>Active contributor to several open-source projects, strong advocate for the <a href="https://educates.dev" target="_blank">Educates Training Platform</a> and <a href="https://squidfunk.github.io/mkdocs-material/insiders/community-experts-program" target="_blank">Material for MKDocs Community Expert</a>.</p>
           </div>
         </div>
-        
         <div class="feature-card feature-card-horizontal">
           <div class="feature-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
           </div>
+          <h3 class="feature-card-title">LiFT Scholarship Recipient 2022</h3>
           <div class="feature-content">
-            <h3>Community Builder</h3>
-            <p>Founded and grew a local cloud-native meetup group to over 1,000 members.</p>
+            <p>In the <span style="color: var(--color-accent-primary)">Cloud Captain</span> category, back in 2022. The <a href="https://training.linuxfoundation.org/blog/500-promising-individuals-worldwide-receive-linux-foundation-it-training-certification-scholarships/" target="_blank">Linux Foundation Training Scholarship</a> is issued to 500 aspiring individuals in the cloud-native space each year.</p>
           </div>
         </div>
       </div>
     </section>
-    
     <section class="talks-section">
       <h2>Recent Speaking Engagements</h2>
-      
       <div class="talks-grid">
         <div class="feature-card">
           <div class="feature-card-header">
@@ -111,7 +99,6 @@ hide:
             </a>
           </div>
         </div>
-        
         <div class="feature-card">
           <div class="feature-card-header">
             <span class="feature-card-date">JUN 2023</span>
@@ -129,7 +116,6 @@ hide:
             </a>
           </div>
         </div>
-        
         <div class="feature-card">
           <div class="feature-card-header">
             <span class="feature-card-date">MAR 2023</span>
@@ -144,12 +130,10 @@ hide:
           </div>
         </div>
       </div>
-      
       <div class="view-more-talks">
         <a href="#" class="md-button md-button--primary">View All Talks</a>
       </div>
     </section>
-    
     <section class="contact-section">
       <div class="contact-card">
         <h2>Let's Connect</h2>
@@ -282,7 +266,7 @@ hide:
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 

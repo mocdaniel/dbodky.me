@@ -1,9 +1,10 @@
 ---
 hide:
+  - feedback
   - footer
   - navigation
   - toc
-title: Daniel Bodky
+title: dbodky.me
 description: My personal website focusing on cloud-native topics, discoveries, and my homelab.
 ---
 
@@ -48,7 +49,7 @@ description: My personal website focusing on cloud-native topics, discoveries, a
   </div>
 
   <section id="content-section" class="merged-section">
-    <div class="container">
+    <div class="content-card">
       <!-- About Me Section -->
       <div id="about-me" class="about-section">
         <div class="section-header">
@@ -191,7 +192,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 92vh;
+  height: 95vh;
   overflow: hidden;
   background-color: var(--color-bg-primary);
 }
@@ -1275,8 +1276,11 @@ body {
 .merged-section {
   position: relative;
   z-index: 1;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
 }
+
 
 .merged-section .container {
   max-width: 1200px;
