@@ -126,9 +126,6 @@ description: Things to know about Daniel Bodky
           </div>
         </div>
       </div>
-      <div class="view-more-talks">
-        <a href="#" class="md-button md-button--primary">View All Talks</a>
-      </div>
     </section>
     <section class="contact-section">
       <div class="contact-card">
