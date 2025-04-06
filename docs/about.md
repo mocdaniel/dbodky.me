@@ -84,16 +84,16 @@ description: Things to know about Daniel Bodky
       <div class="talks-grid">
         <div class="feature-card">
           <div class="feature-card-header">
-            <span class="feature-card-date">OCT 2023</span>
-            <span class="feature-card-meta">KubeCon + CloudNativeCon</span>
+            <span class="feature-card-date">NOV 2024</span>
+            <span class="feature-card-meta">Open Source Monitoring Conference 2024</span>
           </div>
-          <h3 class="feature-card-title">Scaling Kubernetes in Production: Lessons from the Trenches</h3>
+          <h3 class="feature-card-title">Reimagining Technical Training With Educates</h3>
           <div class="feature-card-links">
-            <a href="#" class="feature-card-link">
+            <a href="https://de.slideshare.net/slideshow/osmc-2024-ignite-reimagining-technical-training-with-educates-by-daniel-bodky_2024-pdf/273860581" class="feature-card-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path></svg>
               Slides
             </a>
-            <a href="#" class="feature-card-link">
+            <a href="https://www.youtube.com/watch?v=n8BTGz1-P1c" class="feature-card-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
               Video
             </a>
@@ -101,16 +101,16 @@ description: Things to know about Daniel Bodky
         </div>
         <div class="feature-card">
           <div class="feature-card-header">
-            <span class="feature-card-date">JUN 2023</span>
-            <span class="feature-card-meta">DevOpsDays Seattle</span>
+            <span class="feature-card-date">JUL 2024</span>
+            <span class="feature-card-meta">Kubernetes Community Days Munich 2024</span>
           </div>
-          <h3 class="feature-card-title">GitOps: The Future of Kubernetes Deployments</h3>
+          <h3 class="feature-card-title">Towards Standardized Platforms: How the CNOE Project Can Help</h3>
           <div class="feature-card-links">
-            <a href="#" class="feature-card-link">
+            <a href="https://slides.dbodky.me/kcd-munich-2024/1" class="feature-card-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path></svg>
               Slides
             </a>
-            <a href="#" class="feature-card-link">
+            <a href="https://www.youtube.com/watch?v=RRmtCI1qKkk&list=PL54A_DPe8WtBuSp7sqpxeuy_UoTTlKB1O&index=30&t=1s" class="feature-card-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
               Video
             </a>
@@ -118,15 +118,11 @@ description: Things to know about Daniel Bodky
         </div>
         <div class="feature-card">
           <div class="feature-card-header">
-            <span class="feature-card-date">MAR 2023</span>
-            <span class="feature-card-meta">Cloud Native Day Toronto</span>
+            <span class="feature-card-date">MAR 2024</span>
+            <span class="feature-card-meta">DevOpsDays Zurich 2024</span>
           </div>
-          <h3 class="feature-card-title">Observability in Microservices: Beyond Metrics, Logs, and Traces</h3>
+          <h3 class="feature-card-title">ArgoCD Odyssey: Navigating from Basics to Brilliance</h3>
           <div class="feature-card-links">
-            <a href="#" class="feature-card-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path></svg>
-              Slides
-            </a>
           </div>
         </div>
       </div>
