@@ -72,7 +72,7 @@ description: Things to know about Daniel Bodky
           <div class="feature-card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
           </div>
-          <h3 class="feature-card-title">LiFT Scholarship Recipient 2022</h3>
+          <h3 class="feature-card-title">LiFT Scholarship Recipient</h3>
           <div class="feature-content">
             <p>In the <span style="color: var(--color-accent-primary)">Cloud Captain</span> category, back in 2022. The <a href="https://training.linuxfoundation.org/blog/500-promising-individuals-worldwide-receive-linux-foundation-it-training-certification-scholarships/" target="_blank">Linux Foundation Training Scholarship</a> is issued to 500 aspiring individuals in the cloud-native space each year.</p>
           </div>
@@ -132,8 +132,8 @@ description: Things to know about Daniel Bodky
         <h2>Let's Connect</h2>
         <p>Interested in having me speak at your event, contribute to your project, or discuss cloud-native technologies?</p>
         <div class="contact-actions">
-          <a href="/" class="md-button md-button--primary">Get in Touch</a>
-          <a href="mailto:contact@example.com" class="md-button md-button--secondary">Email Me Directly</a>
+          <a href="/#contact" class="contact-button">Get in Touch</a>
+          <a href="mailto:blog@dbodky.me" class="contact-button">Email Me Directly</a>
         </div>
       </div>
     </section>
@@ -338,5 +338,23 @@ description: Things to know about Daniel Bodky
   .intro-lead {
     font-size: 1.1rem;
   }
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(88, 166, 255, 0.1);
+  color: var(--color-accent-primary) !important;
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: var(--color-accent-primary);
+  color: #ffffff !important;
+  transform: translateY(-3px);
 }
 </style>
