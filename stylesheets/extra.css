@@ -1,0 +1,86 @@
+/* GitHub-inspired Dark Theme */
+:root {
+  --color-bg-primary: #0d1117;
+  --color-bg-secondary: #161b22;
+  --color-bg-tertiary: #21262d;
+  --color-border-primary: #30363d;
+  --color-text-primary: #c9d1d9;
+  --color-text-secondary: #8b949e;
+  --color-accent-primary: #58a6ff;
+  --color-accent-secondary: #1f6feb;
+  --color-accent-gradient: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
+}
+
+/* Override Material theme colors */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--color-bg-secondary);
+  --md-primary-fg-color--light: var(--color-bg-tertiary);
+  --md-primary-fg-color--dark: var(--color-bg-primary);
+  --md-accent-fg-color: var(--color-accent-primary);
+  --md-typeset-a-color: var(--color-accent-primary);
+  --md-default-bg-color: var(--color-bg-primary);
+  --md-default-fg-color: var(--color-text-primary);
+  --md-default-fg-color--light: var(--color-text-secondary);
+  --md-code-bg-color: var(--color-bg-tertiary);
+  --md-code-fg-color: var(--color-text-primary);
+  --md-footer-bg-color: var(--color-bg-secondary);
+  --md-footer-bg-color--dark: var(--color-bg-tertiary);
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(88, 166, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Light effects for the shared background */
+.light-effect {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.light-effect-1 {
+  top: 10%;
+  left: 5%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.6) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite alternate;
+}
+
+.light-effect-2 {
+  bottom: 20%;
+  right: 10%;
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(31, 111, 235, 0.6) 0%, transparent 70%);
+  animation: pulse 18s ease-in-out 2s infinite alternate;
+}
+
+.light-effect-3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.3) 0%, transparent 70%);
+  animation: pulse 20s ease-in-out 1s infinite alternate;
+}
+
+.md-post--excerpt {
+  background-color: rgba(26, 34, 51, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(45, 55, 72, 0.7);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
