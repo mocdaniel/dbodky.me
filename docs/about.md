@@ -82,6 +82,28 @@ description: Things to know about Daniel Bodky
     <section class="talks-section">
       <h2>Recent Speaking Engagements</h2>
       <div class="talks-grid">
+      <div class="feature-card">
+          <div class="feature-card-header">
+            <span class="feature-card-date">JUN 2025</span>
+            <span class="feature-card-meta">KCD Czech&Slovak 2025</span>
+          </div>
+          <h3 class="feature-card-title">Ahoj Alloy: How Grafana Alloy Can Transform Your OpenTelemetry Journey</h3>
+          <div class="feature-card-links">
+            <a href="https://slides.dbodky.me/kcd-cz-sk-2025" class="feature-card-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path></svg>
+              Slides
+            </a>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <span class="feature-card-date">JUN 2025</span>
+            <span class="feature-card-meta">KCD Czech&Slovak 2025</span>
+          </div>
+          <h3 class="feature-card-title">Building a Better Tomorrow: Tips and Tricks for Docker Builds</h3>
+          <div class="feature-card-links">
+          </div>
+        </div>
         <div class="feature-card">
           <div class="feature-card-header">
             <span class="feature-card-date">NOV 2024</span>
