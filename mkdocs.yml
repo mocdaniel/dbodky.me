@@ -61,12 +61,28 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - tables
 # Homepage configuration
 nav:
   - Home: index.md
   - About Me: about.md
   - Blog:
       - Blog Overview: blog/index.md
+  - Homelab:
+      - Hardware:
+          Network:
+            - homelab/hardware/router.md
+            - homelab/hardware/switch.md
+          Compute:
+            - homelab/hardware/rpi.md
+            - homelab/hardware/rk1.md
+      - Docker:
+          - homelab/docker/data-root.md
+          - homelab/docker/expose-endpoint.md
+      - Observability:
+          - homelab/observability/alloy.md
+      - Talos:
+          - homelab/talos/installation.md
 repo_name: mocdaniel/dbodky.me
 repo_url: https://github.com/mocdaniel/dbodky.me
 plugins:
@@ -94,6 +110,7 @@ site_author: Daniel Bodky
 theme:
   custom_dir: overrides/
   features:
+    - content.code.annotate
     - content.code.copy
     - content.footnote.tooltips
     - navigation.footer
