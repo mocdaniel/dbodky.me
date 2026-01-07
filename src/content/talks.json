@@ -1,0 +1,165 @@
+{
+    "ahoy-alloy": {
+        "title": "Ahoy Alloy! How Grafana Alloy Can Transform Your OpenTelemetry Journey",
+        "tags": ["OTel", "Alloy"],
+        "year": 2025,
+        "type": "Talk",
+        "conferences": [
+            "KCD Czech & Slovak 2025",
+            "OpenTechDay Grafana Edition 2025"
+        ],
+        "excerpt": "Introduction to Grafana Alloy, Grafana's OpenTelemetry Collector Distribution.",
+        "slides": "https://slides.dbodky.me/kcd-cz-sk-2025",
+        "recording": "https://www.youtube.com/watch?v=hOhY72gmt1o"
+    },
+    "argocd-odyssey": {
+        "title": "ArgoCD Odyssey: Navigating from Basics to Brilliance",
+        "year": 2024,
+        "tags": ["GitOps", "Kubernetes", "ArgoCD"],
+        "type": "Workshop",
+        "conferences": [
+            "DevOpsDays Zurich 2024",
+            "DevOpsDays Amsterdam 2024"
+        ],
+        "excerpt": "Hands-on workshop on ArgoCD, a GitOps engine for Kubernetes."
+    },
+    "docker-builds": {
+        "title": "Building a Better Tomorrow: Tips and Tricks for Docker Builds",
+        "year": 2025,
+        "tags": ["Containers", "CI/CD", "Docker"],
+        "type": "Workshop",
+        "conferences": [
+            "KCD Czech & Slovak 2025",
+            "DevOpsDays Amsterdam 2025",
+            "Code Europe 2025"
+        ],
+        "excerpt": "Hands-on workshop exploring useful tips and practices for building slim and secure container images."
+    },
+    "ansible-events": {
+        "title": "From Automated to Automatic - Event-Driven Infrastructure Management with Ansible",
+        "year": 2024,
+        "tags": ["Config Management", "Ansible"],
+        "type": "Talk",
+        "conferences": [
+            "90DaysOfDevOps - 2024 Community Edition"
+        ],
+        "excerpt": "Broad overview of Ansible and its recently added feature event-driven Ansible (EDA) for automatic config managent.",
+        "recording": "https://www.youtube.com/watch?v=BljdQTewSic"
+    },
+    "acorn": {
+        "title": "From Dev to Prod with Acorn - Simplifying Kubernetes Deployments",
+        "year": 2023,
+        "tags": ["Kubernetes"],
+        "type": "Workshop",
+        "conferences": [
+            "Civo Navigate Tampa 2023"
+        ],
+        "excerpt": "Hands-on introduction to Acorn, a Docker Compose-like deployment framework for Kuberentes.",
+        "slides": "https://slides.dbodky.me/civo-navigate-2023"
+    },
+    "cnoe": {
+        "title": "Towards Standardized Platforms: How the CNOE Project Can Help",
+        "year": 2024,
+        "tags": ["Kubernetes", "Platform Engineering"],
+        "type": "Talk",
+        "conferences": [
+            "OpenInfra Day Berlin 2024",
+            "KCD Munich 2024",
+            "stackconf 2024"
+        ],
+        "excerpt": "A talk highlighting the chances and problems of Platform Engineering, and how the CNOE project might be able to help.",
+        "slides": "https://slides.dbodky.me/kcd-munich-2024",
+        "recording": "https://youtu.be/RRmtCI1qKkk?si=1hYJHkahxY69Avpq"
+    },
+    "harry-potter": {
+        "title": "\"Best Do It At a Bit of a Run If You're Nervous!\"",
+        "year": 2024,
+        "tags": ["Personal Learnings"],
+        "type": "Lightning Talk",
+        "conferences": [
+            "DevOpsDays Amsterdam 2024"
+        ],
+        "excerpt": "A short talk about my personal experiences of doing 'a bit of a run' in different situations that were tough during my (short) career in tech.",
+        "recording": "https://www.youtube.com/live/ccAcCnLKO9s?si=7YRln8B1iP_6azTu&t=17863",
+        "slides": "https://slides.dbodky.me/devopsdays-amsterdam-2023"
+    },
+    "sos": {
+        "title": "SOS, Please Someone Help Me!",
+        "year": 2023,
+        "tags": ["Personal Learnings"],
+        "type": "Lightning Talk",
+        "conferences": [
+            "DevOpsDays Amsterdam 2023"
+        ],
+        "excerpt": "A short talk about Shiny Object Syndrome (SOS) and how you can use it to your advantage.",
+        "recording": "https://www.youtube.com/watch?v=zuR9NkPCOpA",
+        "slides": "https://slides.dbodky.me/devopsdays-amsterdam-2023"
+    },
+    "icinga-k8s": {
+        "title": "That's nuts! A Proof of Concept of Icinga2 on Kubernetes Using Acorn.",
+        "year": 2022,
+        "tags": ["Monitoring", "Kubernetes", "Icinga2"],
+        "type": "Lightning Talk",
+        "conferences": [
+            "Open Source Monitoring Conference 2022"
+        ],
+        "excerpt": "A proof of concept on how to run the monitoring software Icinga2 on Kubernetes.",
+        "recording": "https://www.youtube.com/watch?v=Jv22MOhzVOE",
+        "slides": "https://www.slideshare.net/slideshow/osmc-2022-ignite-thats-nuts-a-proof-of-concept-of-icinga2-on-kubernetes-using-acorn-by-daniel-bodky/254439542"
+    },
+    "sre-osmc": {
+        "title": "Metrics, Margins, Mutiny - How to Make Your SREs (not) Run Away",
+        "year": 2023,
+        "tags": ["Site Reliability Engineering"],
+        "type": "Lightning Talk",
+        "conferences": [
+            "Open Source Monitoring Conference 2023"
+        ],
+        "excerpt": "A quick introduction on SRE Best Practices and how to treat your SRE teams.",
+        "recording": "https://www.youtube.com/watch?v=wKQSH1kpgpY",
+        "slides": "https://slides.dbodky.me/osmc-2023"
+    },
+    "ebpf-osmc": {
+        "title": "Observing and Securing Kubernetes Workloads With Cilium, Hubble, and Tetragon",
+        "year": 2024,
+        "tags": ["Kubernetes", "eBPF", "Cilium"],
+        "type": "Workshop",
+        "conferences": [
+            "Open Source Monitoring Conference 2024"
+        ],
+        "excerpt": "A full-day, hands-on workshop on securing Kubernetes environments with Cilium, Tetragon, and Hubble leveraging eBPF."
+    },
+    "otel-osmc": {
+        "title": "From Zero Observability to Zero-Code Observability with OpenTelemetry",
+        "year": 2025,
+        "tags": ["OTel", "Monitoring", "Grafana"],
+        "type": "Workshop",
+        "conferences": [
+            "Open Source Monitoring Conference 2025"
+        ],
+        "excerpt": "A half-day, hands-on workshop on zero-code instrumentation of containerized applications with OpenTelemetry."
+    },
+    "falco": {
+        "title": "[DE] Who Watches the Watchmen? Echtzeit-Threat-Detection auf Hypervisoren mit Falco",
+        "year": 2025,
+        "tags": ["Kubernetes", "Security", "Falco"],
+        "type": "Talk",
+        "conferences": [
+            "S2N 2025"
+        ],
+        "excerpt": "Introduction to Falco and how we use it in our environment to gain real-time anomaly and threat detection.",
+        "slides": "https://slides.dbodky.me/s2n-regensburg-2025"
+    },
+    "icinga-camp": {
+        "title": "The Times They Are A'Changing: Icinga2 on Kubernetes",
+        "year": 2023,
+        "tags": ["Kubernetes", "Helm", "Monitoring", "Icinga2"],
+        "type": "Talk",
+        "conferences": [
+            "IcingaCamp Berlin 2023"
+        ],
+        "excerpt": "Presenting a proof-of-concept Helmchart for deploying Icinga2 on Kubernetes, along with the challenges I faced.",
+        "slides": "https://slides.dbodky.me/icingacamp-2023",
+        "recording": "https://www.youtube.com/watch?v=7BY9ZT2UAw0"
+    }
+}

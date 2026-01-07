@@ -1,0 +1,52 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Opengraph from "@/components/Opengraph.astro";
+import "@/styles/global.css";
+
+interface Props {
+	content: {
+		title: string;
+		desc: string;
+		img: string;
+		slug: string;
+		type: "article" | "website";
+		published_at: string | undefined;
+		tags: string[] | undefined;
+	};
+}
+
+const { content } = Astro.props;
+const { title, desc, img, slug, type, published_at, tags } = content;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<Opengraph
+			title={title}
+			desc={desc}
+			img={img}
+			slug={slug}
+			type={type}
+			published_at={published_at}
+			tags={tags}
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			defer
+			src="https://umami.dbodky.me/script.js"
+			data-website-id="6a844fc5-f7ff-4ecf-ae10-0d5488bd1a38"></script>
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>

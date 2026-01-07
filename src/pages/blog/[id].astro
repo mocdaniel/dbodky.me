@@ -1,0 +1,269 @@
+---
+import Jscopy from "@/layouts/jscopy.astro";
+import Main from "@/layouts/main.astro";
+import { getCollection, render } from "astro:content";
+import "remark-github-blockquote-alert/alert.css";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogSchema");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const content = {
+  title: post.data.title,
+  desc: post.data.excerpt ?? "No description available.",
+  img: `https://dbodky.me/og-images/${post.id}.png`,
+  slug: `https://dbodky.me/blog/${post.id}`,
+  type: "article" as "website" | "article",
+  published_at: post.data.pubDate.toISOString(),
+  tags: post.data.tags,
+};
+---
+
+<Main content={content}>
+  <Jscopy>
+    <article class="pt-32 pb-24 px-6 lg:px-8 max-w-6xl mx-auto">
+      <h1>{post.data.title}</h1>
+
+      <Content />
+    </article>
+  </Jscopy>
+</Main>
+
+<style>
+  article {
+    color: #f8f8f2;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 768px;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    ul li {
+      list-style-type: disc;
+    }
+
+    ul li::marker,
+    ol li::marker {
+      color: #ff79c6;
+    }
+
+    ul li::marker {
+      font-size: 20px;
+    }
+
+    ol li::marker {
+      font-weight: 600;
+    }
+
+    ol li {
+      list-style-type: decimal;
+    }
+
+    li > ul,
+    li > ol {
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+
+    p code,
+    li code,
+    h1 code,
+    h2 code,
+    h3 code {
+      background-color: #44475a;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+    }
+
+    .astro-code {
+      border: 1px solid #44475a;
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .admonition {
+      border-left: 4px solid #8be9fd;
+      background-color: #44475a;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+
+    .admonition.info {
+      border-left-color: #8be9fd;
+      background-color: rgba(139, 233, 253, 0.1);
+    }
+
+    .admonition.warning {
+      border-left-color: #f1fa8c;
+      background-color: rgba(241, 250, 140, 0.1);
+    }
+
+    .admonition.danger {
+      border-left-color: #ff79c6;
+      background-color: rgba(255, 121, 198, 0.1);
+    }
+
+    .admonition.success {
+      border-left-color: #50fa7b;
+      background-color: rgba(80, 250, 123, 0.1);
+    }
+
+    .admonition-title {
+      color: #8be9fd;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+
+    .admonition p {
+      margin-bottom: 0.5rem;
+    }
+
+    .admonition p:last-child {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95em;
+    }
+
+    table thead {
+      background-color: #44475a;
+    }
+
+    table th {
+      color: #8be9fd;
+      padding: 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #8be9fd;
+    }
+
+    table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #44475a;
+    }
+
+    table tbody tr:hover {
+      background-color: rgba(139, 233, 253, 0.05);
+    }
+
+    figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      background-color: #44475a;
+      margin-inline: auto;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #44475a;
+      margin: 2rem 0;
+    }
+
+    a {
+      color: #8be9fd;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #ff79c6;
+      text-decoration-thickness: 2px;
+    }
+
+    .no-copy {
+      user-select: none;
+    }
+
+    .copy-code {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0.5rem 0.5rem;
+      padding: 0.5rem 0.5rem;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      border-radius: 6px;
+    }
+
+    .copy-code:hover {
+      background-color: #44475a;
+    }
+
+    .copy-code.success {
+      color: #50fa7b;
+    }
+
+    figcaption {
+      color: #6272a4;
+      font-size: 0.9em;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+  }
+</style>

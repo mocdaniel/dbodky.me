@@ -1,0 +1,446 @@
+---
+import Separator from "@/components/Separator.astro";
+import Main from "@/layouts/main.astro";
+import { Award, Calendar, ExternalLink, MapPin } from "@lucide/astro";
+
+const content = {
+    title: "About me",
+    desc: "Who I am and what I am doing.",
+    img: "https://dbodky.me/og-images/about.png",
+    slug: "https://dbodky.me/about",
+    type: "website" as "website" | "article",
+    published_at: undefined,
+    tags: undefined,
+};
+---
+
+<Main content={content}>
+    <main class="min-h-screen bg-background text-foreground">
+        {/* Hero Section with Image */}
+        <section class="pt-32 pb-16 px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                {/* Profile Image */}
+                <div class="lg:col-span-1">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 bg-linear-to-br from-primary/30 via-accent/20 to-secondary/30 rounded-2xl blur-2xl"
+                        >
+                        </div>
+                        <img
+                            src="/about.jpeg"
+                            alt="Daniel on stage at Icinga Camp Berlin 2023"
+                            class="relative w-full aspect-square object-cover rounded-2xl border-2 border-border"
+                        />
+                    </div>
+                </div>
+
+                {/* Introduction */}
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <h1
+                            class="text-5xl lg:text-6xl font-bold text-foreground mb-4"
+                        >
+                            About <span class="text-primary">Daniel</span>
+                        </h1>
+                        <p class="text-xl text-accent font-semibold">
+                            Cloud Native Advocate • Speaker • Trainer
+                        </p>
+                    </div>
+
+                    <div
+                        class="space-y-4 text-lg text-muted-foreground leading-relaxed"
+                    >
+                        <p>
+                            I&apos;m a passionate cloud native engineer and
+                            community advocate with a deep focus on
+                            containerization, Kubernetes, and modern cloud
+                            infrastructure. Over the last five years, I&apos;ve
+                            helped organizations large and small design, build,
+                            and scale resilient IT infrastructure.
+                        </p>
+
+                        <p>
+                            My journey in tech began with a curiosity about what
+                            fits into a container - and what doesn&apos;t.
+                            Today, I combine hands-on technical expertise with a
+                            love for teaching and sharing knowledge through
+                            workshops, conference talks, and technical writing.
+                            I believe in the strength of communities and making
+                            complex technologies accessible to everyone.
+                        </p>
+
+                        <p>
+                            When I&apos;m not working with containers and
+                            clusters, you&apos;ll find me contributing to open
+                            source projects, exploring the latest developments
+                            in observability and cloud for my homelab, or
+                            blogging about my experiences on this website.
+                        </p>
+                    </div>
+
+                    {/* Quick Stats */}
+                    <div class="grid grid-cols-3 gap-4 pt-8">
+                        <div
+                            class="p-4 rounded-xl bg-card border border-border text-center"
+                        >
+                            <div class="text-3xl font-bold text-primary">
+                                15+
+                            </div>
+                            <div class="text-sm text-muted-foreground mt-1">
+                                Talks Given
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-4 rounded-xl bg-card border border-border text-center"
+                        >
+                            <div class="text-3xl font-bold text-accent">
+                                10+
+                            </div>
+                            <div class="text-sm text-muted-foreground mt-1">
+                                Workshops Given
+                            </div>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-card border border-border text-center"
+                        >
+                            <div class="text-3xl font-bold text-secondary">
+                                5+
+                            </div>
+                            <div class="text-sm text-muted-foreground mt-1">
+                                Countries
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Separator />
+
+        {/* Achievements Section */}
+        <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-foreground">
+                        Achievements & Recognition
+                    </h2>
+                    <p class="text-lg text-muted-foreground">
+                        Milestones and honors that mark my journey in the cloud
+                        native ecosystem.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* CNCF Kubestronaut */}
+                    <div
+                        class="group p-8 rounded-xl bg-card border border-border hover:border-accent transition-all duration-300"
+                    >
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="p-3 rounded-lg bg-primary/20 border border-primary/30 group-hover:bg-primary/30 transition-colors"
+                            >
+                                <Award class="text-primary" size={28} />
+                            </div>
+                            <div class="flex-1">
+                                <h3
+                                    class="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors"
+                                >
+                                    CNCF Kubestronaut
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-3">
+                                    Achieved all five Kubernetes certifications
+                                    (CKA, CKAD, CKS, KCNA, KCSA), demonstrating
+                                    comprehensive expertise across the entire
+                                    Kubernetes ecosystem.
+                                </p>
+                                <div
+                                    class="flex items-center gap-2 text-sm text-accent"
+                                >
+                                    <Calendar size={16} />
+                                    <span>2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Grafana Champion */}
+                    <div
+                        class="group p-8 rounded-xl bg-card border border-border hover:border-accent transition-all duration-300"
+                    >
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="p-3 rounded-lg bg-accent/20 border border-accent/30 group-hover:bg-accent/30 transition-colors"
+                            >
+                                <Award class="text-accent" size={28} />
+                            </div>
+                            <div class="flex-1">
+                                <h3
+                                    class="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors"
+                                >
+                                    Grafana Champion
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-3">
+                                    Recognized for contributions to the Grafana
+                                    community through educational content,
+                                    workshops, and helping others master
+                                    observability best practices.
+                                </p>
+                                <div
+                                    class="flex items-center gap-2 text-sm text-accent"
+                                >
+                                    <Calendar size={16} />
+                                    <span>2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Conference Speaker */}
+                    <div
+                        class="group p-8 rounded-xl bg-card border border-border hover:border-accent transition-all duration-300"
+                    >
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="p-3 rounded-lg bg-secondary/20 border border-secondary/30 group-hover:bg-secondary/30 transition-colors"
+                            >
+                                <MapPin class="text-secondary" size={28} />
+                            </div>
+                            <div class="flex-1">
+                                <h3
+                                    class="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors"
+                                >
+                                    International Speaker
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-3">
+                                    Featured speaker at tech conferences of all
+                                    sizes including Kubernetes Community Days,
+                                    DevOpsDays events, and community meetups
+                                    worldwide.
+                                </p>
+                                <div
+                                    class="flex items-center gap-2 text-sm text-accent"
+                                >
+                                    <Calendar size={16} />
+                                    <span>2023 - Present</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* LiFT Scholarship */}
+                    <div
+                        class="group p-8 rounded-xl bg-card border border-border hover:border-accent transition-all duration-300"
+                    >
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="p-3 rounded-lg bg-primary/20 border border-primary/30 group-hover:bg-primary/30 transition-colors"
+                            >
+                                <Award class="text-primary" size={28} />
+                            </div>
+                            <div class="flex-1">
+                                <h3
+                                    class="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors"
+                                >
+                                    LiFT Scholarship Recipient
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-3">
+                                    Awarded the Linux Foundation Training (LiFT)
+                                    scholarship which helped me start my journey
+                                    with Kubernetes and cloud native
+                                    technologies.
+                                </p>
+                                <div
+                                    class="flex items-center gap-2 text-sm text-accent"
+                                >
+                                    <Calendar size={16} />
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Separator />
+
+        {/* Expertise Section */}
+        <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-foreground">
+                        Areas of Expertise
+                    </h2>
+                    <p class="text-lg text-muted-foreground">
+                        Technologies and practices I work with frequently and/or
+                        teach to others.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="p-6 rounded-xl bg-card border border-border hover:border-accent transition-colors"
+                    >
+                        <h3 class="text-lg font-bold text-foreground mb-4">
+                            Container Technologies
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                ["Docker", "Podman", "Containerd"].map(
+                                    (tech) => (
+                                        <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border border-primary/30">
+                                            {tech}
+                                        </span>
+                                    ),
+                                )
+                            }
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-6 rounded-xl bg-card border border-border hover:border-accent transition-colors"
+                    >
+                        <h3 class="text-lg font-bold text-foreground mb-4">
+                            Orchestration
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                ["Kubernetes", "Helm", "ArgoCD", "Flux"].map(
+                                    (tech) => (
+                                        <span class="px-3 py-1 rounded-full text-sm bg-accent/20 text-accent border border-accent/30">
+                                            {tech}
+                                        </span>
+                                    ),
+                                )
+                            }
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-6 rounded-xl bg-card border border-border hover:border-accent transition-colors"
+                    >
+                        <h3 class="text-lg font-bold text-foreground mb-4">
+                            Observability
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    "Prometheus",
+                                    "Grafana",
+                                    "Loki",
+                                    "Alloy",
+                                    "OpenTelemetry",
+                                ].map((tech) => (
+                                    <span class="px-3 py-1 rounded-full text-sm bg-secondary/20 text-secondary border border-secondary/30">
+                                        {tech}
+                                    </span>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-6 rounded-xl bg-card border border-border hover:border-accent transition-colors"
+                    >
+                        <h3 class="text-lg font-bold text-foreground mb-4">
+                            Infrastructure as Code
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                ["Terraform", "Pulumi", "Ansible"].map(
+                                    (tech) => (
+                                        <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border border-primary/30">
+                                            {tech}
+                                        </span>
+                                    ),
+                                )
+                            }
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-6 rounded-xl bg-card border border-border hover:border-accent transition-colors"
+                    >
+                        <h3 class="text-lg font-bold text-foreground mb-4">
+                            CI/CD
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                ["GitHub Actions", "GitLab CI", "Git"].map(
+                                    (tech) => (
+                                        <span class="px-3 py-1 rounded-full text-sm bg-accent/20 text-accent border border-accent/30">
+                                            {tech}
+                                        </span>
+                                    ),
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div
+                        class="p-6 rounded-xl bg-card border border-border hover:border-accent transition-colors"
+                    >
+                        <h3 class="text-lg font-bold text-foreground mb-4">
+                            Coding
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    "Golang",
+                                    "Python",
+                                    "Typescript",
+                                    "HTML/CSS",
+                                    "React",
+                                    "Astro",
+                                ].map((tech) => (
+                                    <span class="px-3 py-1 rounded-full text-sm bg-secondary/20 text-secondary border border-secondary/30">
+                                        {tech}
+                                    </span>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Separator />
+
+        {/* CTA Section */}
+        <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+            <div
+                class="p-12 rounded-2xl bg-linear-to-br from-card via-card to-card border border-border relative overflow-hidden"
+            >
+                <div
+                    class="absolute inset-0 bg-linear-to-br from-primary/5 via-accent/5 to-secondary/5"
+                >
+                </div>
+                <div class="relative z-10 max-w-2xl">
+                    <h2 class="text-3xl font-bold text-foreground mb-4">
+                        Let&apos;s Connect
+                    </h2>
+                    <p class="text-lg text-muted-foreground mb-8">
+                        Interested in collaborating on a project, inviting me to
+                        speak at your event, or just want to chat about cloud
+                        native technologies? I&apos;d love to hear from you.
+                    </p>
+                    <div class="flex gap-4">
+                        <a
+                            href="/#contact"
+                            class="px-8 py-4 bg-accent text-accent-foreground rounded-full font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2"
+                        >
+                            Get in Touch
+                            <ExternalLink size={20} />
+                        </a>
+                        <a
+                            href="/speaking"
+                            class="px-8 py-4 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-all"
+                        >
+                            View Speaking
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Main>

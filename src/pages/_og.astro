@@ -1,0 +1,66 @@
+---
+import "@/styles/global.css";
+---
+
+<main
+    class="pt-24 h-[630px] w-[1200px] bg-background text-foreground overflow-hidden"
+>
+    <section class="px-24 lg:px-24 max-w-7xl mx-auto relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+            <div class="space-y-8">
+                <div class="space-y-4">
+                    <h1
+                        id="title"
+                        class="text-8xl lg:text-8xl font-bold leading-tight text-balance text-primary"
+                    >
+                    </h1>
+                    <p
+                        id="desc"
+                        class="text-4xl lg:text-4xl text-muted-foreground font-light leading-relaxed max-w-lg text-pretty"
+                    >
+                    </p>
+
+                    <p
+                        class="text-3xl lg:text-3xl mt-12 underline font-light text-muted-foreground leading-relaxed"
+                    >
+                        dbodky.me
+                    </p>
+                </div>
+            </div>
+
+            <div class="hidden lg:flex justify-center items-center">
+                <div class="relative w-96 h-96">
+                    {/* Dracula-themed gradient circles */}
+                    <div
+                        class="absolute inset-0 bg-linear-to-br from-primary/40 via-accent/20 to-transparent rounded-full blur-2xl"
+                    >
+                    </div>
+                    <div
+                        class="absolute top-20 right-20 w-72 h-72 bg-linear-to-br from-secondary/60 via-primary/40 to-transparent rounded-full blur-2xl animate-pulse"
+                    >
+                    </div>
+                    <div
+                        class="absolute -bottom-20 -right-20 w-96 h-96 bg-linear-to-t from-muted/20 via-accent/10 to-transparent rounded-full blur-2xl"
+                    >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function decodeHtmlEntities(text: string) {
+        const textarea = document.createElement("textarea");
+        textarea.innerHTML = text;
+        return textarea.value;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const rawTitle = params.get("title") || "Untitled";
+    const rawDesc = params.get("desc") || "no description";
+    const title = decodeHtmlEntities(rawTitle);
+    const desc = decodeHtmlEntities(rawDesc);
+    document.getElementById("title")!.textContent = title;
+    document.getElementById("desc")!.textContent = desc;
+</script>
