@@ -14,6 +14,7 @@ const posts = [
 	{title: 'Blog', desc: 'Configuring SAML Authentication for Omni with Authentik', id: 'saml-authentication-for-omni-with-authentik'},
 	{title: 'Blog', desc: 'Three Cloud Native Projects to Follow in 2024', id: 'three-cloud-native-projects-to-follow-2024'},
 	{title: 'Blog', desc: 'The Good, the Better, and the Ugly - Signing Git Commits', id: 'why-to-sign-git-commits'},
+	{title: 'Blog', desc: 'Reviving the Homelab Part 1: Architecture', id: 'reviving-the-homelab-part-1-architecture'},
 ];
 const hiddenPath = [process.cwd(), 'src/pages/_og.astro'].join('/');
 const visiblePath = [process.cwd(), 'src/pages/og.astro'].join('/');
