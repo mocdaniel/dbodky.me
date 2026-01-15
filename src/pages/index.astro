@@ -28,9 +28,9 @@ allBlogPosts.splice(3);
 
 <Main content={content}>
   <main class="min-h-screen bg-background text-foreground overflow-hidden">
-    <section class="lg:pt-32 pb-24 px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section class="pb-24 px-6 lg:px-8 max-w-7xl mx-auto relative">
       <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-180"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen"
       >
         <div class="space-y-8">
           <div class="space-y-4">
@@ -118,9 +118,9 @@ allBlogPosts.splice(3);
       </div>
 
       <div
-        class="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce"
+        class="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-.5 animate-bounce"
       >
-        <span class="text-sm text-muted-foreground">Scroll to explore</span>
+        <span class="text-md text-muted-foreground">Scroll to explore</span>
         <ChevronDown class="text-accent" size={32} />
       </div>
     </section>
