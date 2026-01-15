@@ -1,5 +1,4 @@
 ---
-import Jscopy from "@/layouts/jscopy.astro";
 import Main from "@/layouts/main.astro";
 import { getCollection, render } from "astro:content";
 import "remark-github-blockquote-alert/alert.css";
@@ -27,13 +26,11 @@ const content = {
 ---
 
 <Main content={content}>
-  <Jscopy>
-    <article class="pt-32 pb-24 px-6 lg:px-8 max-w-6xl mx-auto">
-      <h1>{post.data.title}</h1>
+  <article class="pt-32 pb-24 px-6 lg:px-8 max-w-6xl mx-auto">
+    <h1>{post.data.title}</h1>
 
-      <Content />
-    </article>
-  </Jscopy>
+    <Content />
+  </article>
 </Main>
 
 <style>
@@ -237,30 +234,7 @@ const content = {
       text-decoration-thickness: 2px;
     }
 
-    .no-copy {
-      user-select: none;
-    }
-
-    .copy-code {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 0.5rem 0.5rem;
-      padding: 0.5rem 0.5rem;
-      font-size: 0.75rem;
-      line-height: 1rem;
-      border-radius: 6px;
-    }
-
-    .copy-code:hover {
-      background-color: #44475a;
-    }
-
-    .copy-code.success {
-      color: #50fa7b;
-    }
-
-    figcaption {
+    figcaption & :not(.expressive-code) {
       color: #6272a4;
       font-size: 0.9em;
       margin-top: 0.75rem;
@@ -271,6 +245,10 @@ const content = {
       font-style: italic;
       border-left: 4px solid #44475a;
       padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .expressive-code {
       margin-bottom: 1.5rem;
     }
   }
