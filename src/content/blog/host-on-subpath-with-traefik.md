@@ -24,7 +24,7 @@ To understand why it can be problematic to reverse-proxy applications on a subpa
 
 The following compose file can be spun up using `docker compose up -d` and will create two containers, one for Traefik and one for Grafana:
 
-```yaml
+```yaml title="compose.yml"
 services:
   traefik:
     image: traefik:latest
@@ -79,7 +79,7 @@ This redirect gets reverse-proxied by Traefik again, but there's no rule for `/l
 
 Luckily, many applications allow us to configure the **root path** they're being accessed at. In Grafana's case, we can add the following block to its `service` definition in our compose file:
 
-```yaml
+```yaml title="compose.yml"
 environment:
   - GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s:%(http_port)s/grafana
   - GF_SERVER_SERVE_FROM_SUB_PATH=true
@@ -95,7 +95,7 @@ After restarting the stack by issuing `docker compose up -d` again, we can now a
 
 Let's add cAdvisor to our compose file and see what happens when we try to access it at [http://localhost/cadvisor](http://localhost/cadvisor):
 
-```yaml
+```yaml title="compose.yml"
 services:
   [...]
   cadvisor:
@@ -128,7 +128,7 @@ As cAdvisor doesn't allow us to configure the root path, we have to find a diffe
 
 We can add the following label to cAdvisor's service definition to enable the `StripPrefix` middleware and check the result in Traefik at [http://localhost:8080/dashboard/#/http/routers/cadvisor@docker](http://localhost:8080/dashboard/#/http/routers/cadvisor@docker):
 
-```yaml
+```yaml title="compose.yml"
 - "traefik.http.middlewares.prefixstripper.stripprefix.prefixes=/cadvisor"
 - "traefik.http.routers.cadvisor.middlewares=prefixstripper"
 ```
@@ -153,14 +153,14 @@ Unfortunately, there exists no builtin middleware for rewriting redirects in Tra
 
 In my case, the [rewrite-headers plugin on GitHub](https://github.com/XciD/traefik-plugin-rewrite-headers) did the trick. First, we have to install the plugin by adding the following lines to Traefik's `command` in our compose file:
 
-```yaml
+```yaml title="compose.yml"
 - --experimental.plugins.rewriteHeaders.moduleName=github.com/XciD/traefik-plugin-rewrite-headers
 - --experimental.plugins.rewriteHeaders.version=v0.0.4
 ```
 
 Then, we can add the following labels to cAdvisor's `labels` to use the freshly installed plugin as middleware:
 
-```yaml
+```yaml title="compose.yml"
 - "traefik.http.middlewares.cadvisor-redirect.plugin.rewriteHeaders.rewrites[0].header=Location"
 - "traefik.http.middlewares.cadvisor-redirect.plugin.rewriteHeaders.rewrites[0].regex=^(.+)$$"
 - "traefik.http.middlewares.cadvisor-redirect.plugin.rewriteHeaders.rewrites[0].replacement=/cadvisor$$1"
@@ -180,7 +180,7 @@ With this new middleware in place, we can finally access cAdvisor at [http://loc
 
 For completeness' sake, here's the full compose file with all the changes we made:
 
-```yaml
+```yaml title="compose.yml"
 services:
   traefik:
     image: traefik:latest
