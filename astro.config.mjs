@@ -6,6 +6,8 @@ import remarkAlert from 'remark-github-blockquote-alert';
 
 import vercel from '@astrojs/vercel';
 
+import astroExpressiveCode from 'astro-expressive-code';
+
 // https://astro.build/config
 export default defineConfig({
   experimental: {
@@ -25,4 +27,9 @@ export default defineConfig({
     },
 
   adapter: vercel(),
+  integrations: [
+    astroExpressiveCode({
+      themes: ['dracula'],
+    }),
+  ],
 });
