@@ -33,6 +33,12 @@ const { title, desc, img, slug, type, published_at, tags } = content;
 			published_at={published_at}
 			tags={tags}
 		/>
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="RSS feed for my blog"
+			href={new URL("feed.xml", Astro.site)}
+		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
