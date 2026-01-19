@@ -7,6 +7,7 @@ import remarkAlert from 'remark-github-blockquote-alert';
 import vercel from '@astrojs/vercel';
 
 import astroExpressiveCode from 'astro-expressive-code';
+import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,7 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [remarkAlert],
+    remarkPlugins: [remarkAlert, remarkReadingTime],
     shikiConfig: {
       theme: 'dracula',
     },
