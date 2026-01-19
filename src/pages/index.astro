@@ -24,14 +24,6 @@ allBlogPosts.sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
 allBlogPosts.splice(3);
-
-const readingTimes: Map<string, string> = new Map();
-
-allBlogPosts.forEach(async (post) => {
-  const { remarkPluginFrontmatter } = await render(post);
-  readingTimes.set(post.id, remarkPluginFrontmatter.minutesRead);
-  console.log(remarkPluginFrontmatter.minutesRead);
-});
 ---
 
 <Main content={content}>
@@ -149,11 +141,11 @@ allBlogPosts.forEach(async (post) => {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {
-            allBlogPosts.map((post) => (
+            allBlogPosts.map(async (post) => (
               <article class="group p-6 rounded-xl bg-card border border-border hover:border-accent transition-all duration-300">
                 <div class="space-y-3 h-full flex flex-col">
                   <div class="flex gap-2">
-                    {post.data.tags.map((tag, j) => (
+                    {post.data.tags.map((tag) => (
                       <span class="text-xs px-2 py-1 rounded-full bg-primary/20 text-primary">
                         {tag}
                       </span>
@@ -176,7 +168,9 @@ allBlogPosts.forEach(async (post) => {
                         year: "numeric",
                       })}
                     </span>
-                    <span>{readingTimes.get(post.id)}</span>
+                    <span>
+                      {(await render(post)).remarkPluginFrontmatter.minutesRead}
+                    </span>
                   </div>
 
                   <a
