@@ -30,6 +30,7 @@ const readingTimes: Map<string, string> = new Map();
 allBlogPosts.forEach(async (post) => {
   const { remarkPluginFrontmatter } = await render(post);
   readingTimes.set(post.id, remarkPluginFrontmatter.minutesRead);
+  console.log(remarkPluginFrontmatter.minutesRead);
 });
 ---
 

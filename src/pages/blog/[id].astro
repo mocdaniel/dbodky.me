@@ -27,11 +27,11 @@ const content = {
 
 <Main content={content}>
   <article class="pt-32 pb-24 px-6 lg:px-8 max-w-6xl mx-auto">
-    <h1>{post.data.title}</h1>
+    <h1 class="mb-3!">{post.data.title}</h1>
 
-    <span class="text-xs text-muted-foreground">
-      {remarkPluginFrontmatter.minutesRead}
-    </span>
+    <p class="text-sm text-muted-foreground mb-8! underline">
+      5 minutes read{remarkPluginFrontmatter.minutesRead}
+    </p>
 
     <Content />
   </article>
