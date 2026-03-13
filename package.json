@@ -10,12 +10,12 @@
     "og": "node src/scripts/generate-og.js"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.10",
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/vercel": "^9.0.4",
-    "@lucide/astro": "^0.553.0",
+    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/rss": "^4.0.17",
+    "@astrojs/vercel": "^10.0.0",
+    "@lucide/astro": "^0.577.0",
     "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.15.7",
+    "astro": "https://pkg.pr.new/astro@15890",
     "astro-expressive-code": "^0.41.6",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
