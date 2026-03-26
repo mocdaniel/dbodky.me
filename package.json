@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/mdx": "^5.0.0",
     "@astrojs/rss": "^4.0.17",
-    "@astrojs/vercel": "^10.0.0",
+    "@astrojs/vercel": "^10.0.2",
     "@lucide/astro": "^0.577.0",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "https://pkg.pr.new/astro@15890",
