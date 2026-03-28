@@ -21,6 +21,7 @@
     "reading-time": "^1.5.0",
     "remark-github-blockquote-alert": "^2.1.0",
     "resend": "^6.9.4",
+    "simple-icons-astro": "^16.1.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.2.2"
   },
