@@ -68,6 +68,7 @@ export const conferences = z.enum([
   "OpenTechDay Grafana Edition 2025",
   "S2N 2025",
   "stackconf 2024",
+  "stackconf 2026",
 ]);
 
 const talkSchema = defineCollection({
