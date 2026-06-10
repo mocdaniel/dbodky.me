@@ -4,7 +4,7 @@
     "tags": ["Kubernetes", "Security", "Falco"],
     "year": 2026,
     "type": "Talk",
-    "conferences": ["stackconf 2026"],
+    "conferences": ["stackconf 2026", "SLAC 2026"],
     "excerpt": "Introduction to Falco and how we use it in our environment to gain real-time anomaly and threat detection.",
     "slides": "https://slides.dbodky.me/stackconf-munich-2026"
   },
@@ -126,7 +126,7 @@
     "year": 2025,
     "tags": ["OTel", "Monitoring", "Grafana"],
     "type": "Workshop",
-    "conferences": ["Open Source Monitoring Conference 2025"],
+    "conferences": ["Open Source Monitoring Conference 2025", "SLAC 2026"],
     "excerpt": "A half-day, hands-on workshop on zero-code instrumentation of containerized applications with OpenTelemetry."
   },
   "falco": {

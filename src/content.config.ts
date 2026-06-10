@@ -67,6 +67,7 @@ export const conferences = z.enum([
   "Open Source Monitoring Conference 2025",
   "OpenTechDay Grafana Edition 2025",
   "S2N 2025",
+  "SLAC 2026",
   "stackconf 2024",
   "stackconf 2026",
 ]);
