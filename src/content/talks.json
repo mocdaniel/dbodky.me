@@ -37,7 +37,8 @@
     "conferences": [
       "KCD Czech & Slovak 2025",
       "DevOpsDays Amsterdam 2025",
-      "Code Europe 2025"
+      "Code Europe 2025",
+      "We Are Developers World Congress Berlin 2026"
     ],
     "excerpt": "Hands-on workshop exploring useful tips and practices for building slim and secure container images."
   },
@@ -147,5 +148,14 @@
     "excerpt": "Presenting a proof-of-concept Helmchart for deploying Icinga2 on Kubernetes, along with the challenges I faced.",
     "slides": "https://slides.dbodky.me/icingacamp-2023",
     "recording": "https://www.youtube.com/watch?v=7BY9ZT2UAw0"
+  },
+  "talos": {
+    "title": "Don't Debug, Reset: Managing Kubernetes the Declarative Way with Talos Linux",
+    "year": 2026,
+    "tags": ["Kubernetes", "Talos"],
+    "type": "Workshop",
+    "conferences": ["Cloud Native Summit Munich 2026"],
+    "excerpt": "Introduction to Talos Linux as a declarative, minimal OS for running Kubernetes.",
+    "slides": "https://slides.dbodky.me/cns-munich-2026"
   }
 }

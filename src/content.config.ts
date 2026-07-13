@@ -47,11 +47,13 @@ const talkTags = z.enum([
   "Platform Engineering",
   "Security",
   "Site Reliability Engineering",
+  "Talos",
 ]);
 
 export const conferences = z.enum([
   "90DaysOfDevOps - 2024 Community Edition",
   "Civo Navigate Tampa 2023",
+  "Cloud Native Summit Munich 2026",
   "Code Europe 2025",
   "DevOpsDays Amsterdam 2023",
   "DevOpsDays Amsterdam 2024",
@@ -70,6 +72,7 @@ export const conferences = z.enum([
   "SLAC 2026",
   "stackconf 2024",
   "stackconf 2026",
+  "We Are Developers World Congress Berlin 2026",
 ]);
 
 const talkSchema = defineCollection({
