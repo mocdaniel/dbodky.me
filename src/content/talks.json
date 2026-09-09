@@ -154,7 +154,7 @@
     "year": 2026,
     "tags": ["Kubernetes", "Talos"],
     "type": "Talk",
-    "conferences": ["Cloud Native Summit Munich 2026"],
+    "conferences": ["Cloud Native Summit Munich 2026", "ContainerDays Hamburg 2026"],
     "excerpt": "Introduction to Talos Linux as a declarative, minimal OS for running Kubernetes.",
     "slides": "https://slides.dbodky.me/cns-munich-2026"
   }

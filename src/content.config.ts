@@ -55,6 +55,7 @@ export const conferences = z.enum([
   "Civo Navigate Tampa 2023",
   "Cloud Native Summit Munich 2026",
   "Code Europe 2025",
+  "ContainerDays Hamburg 2026",
   "DevOpsDays Amsterdam 2023",
   "DevOpsDays Amsterdam 2024",
   "DevOpsDays Amsterdam 2025",
